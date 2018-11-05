@@ -34,6 +34,7 @@ class AddPoll extends Component {
 
   handleSubmit (e) {
     e.preventDefault()
+    this.props.history.push('/')
     this.props.dispatch(handleAddPolls(this.state))
   }
   render () {

@@ -6,7 +6,7 @@ import LoadingBar from 'react-redux-loading'
 import LeaderBoard from './LeaderBoard'
 import AddPoll from './AddPoll'
 import Poll from './Poll'
-import { Route, BrowserRouter, Switch } from 'react-router-dom'
+import { Route, BrowserRouter  } from 'react-router-dom'
 import Nav from './Nav'
 
 class App extends Component {
@@ -24,25 +24,23 @@ class App extends Component {
             {this.props.loading === true
             ? null
             : <div>
-                <Switch>
-                <Route
-                  exact
-                  path='/'
-                  Component={Dashboard}
-                />
-                <Route
-                  path='/leaderboard'
-                  Component={LeaderBoard}
-                />
-                <Route
-                  path='/polls/:id'
-                  Component={Poll}
-                />
                   <Route
-                  path='/add'
-                  Component={AddPoll}
-                />
-                </Switch>
+                    exact
+                    path='/'
+                    component={Dashboard}
+                  />
+                  <Route
+                    path='/leaderboard'
+                    component={LeaderBoard}
+                  />
+                  <Route
+                    path='/polls/:id'
+                    component={Poll}
+                  />
+                  <Route
+                    path='/add'
+                    component={AddPoll}
+                  />
               </div>}
           </div>
         </Fragment>

@@ -32,7 +32,7 @@ export default function users (state = initialState, action){
       }
     case USER.ADD_ANSWER_TO_AUTHOR:{
       const { answerData } = action
-      const { id, authedUser, answer } = answerData
+      const { id, authedUser } = answerData
       console.log(answerData)
       return {
         ...state,

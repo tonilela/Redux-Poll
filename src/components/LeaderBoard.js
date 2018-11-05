@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
 class LeaderBoard extends Component {
@@ -23,7 +22,7 @@ class LeaderBoard extends Component {
             return(
               <li key={id} >
               <div className='moj' >
-                <img src={avatarURL} className='avatar'/>
+                <img src={avatarURL} alt='user' className='avatar'/>
                 <span>
                   {name}
                 </span>

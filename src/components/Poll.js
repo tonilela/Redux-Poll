@@ -20,7 +20,6 @@ class Poll extends Component {
       answer,
       id: poll.id,
     }))
-    console.log('answer '+answer)
   }
   render () {
     if(this.props.poll === null){
@@ -31,7 +30,7 @@ class Poll extends Component {
       )
     }
 
-    const { poll, avatar, id , vote} = this.props
+    const { poll, avatar, vote} = this.props
     const { handleAnswer } = this
     const total = getVoteKeys().reduce((total,key)=>
       total + poll[key].length,0)
@@ -42,7 +41,7 @@ class Poll extends Component {
           {poll.question}
         </h1>
       <div className='poll-author'>
-        by <img src={avatar}/>
+        by <img src={avatar} alt='avatar'/>
       </div>
       <ul>
         {['aText','bText','cText','dText'].map((key) => {
