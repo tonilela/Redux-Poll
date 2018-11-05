@@ -29,7 +29,7 @@ class AddPoll extends Component {
   isDisabled () {
     const { question, a, b, c, d } = this.state
 
-    return question === '' || a === '' || b === '' || c === '' || d === ''
+    return question === 'Hmmm' || a === '' || b === '' || c === '' || d === ''
   }
 
   handleSubmit (e) {
